@@ -14,10 +14,11 @@ html{
 ;
 }
 #Contact{
- HEAD
+<<<<<<< HEAD
     margin-left: 12%;
-======
-    margin-left: 10%; 1689ebd (Fix broken Bootstrap link and styles)
+=======
+    margin-left: 10%;
+>>>>>>> 1689ebd (Fix broken Bootstrap link and styles)
 }
 .color1{
     background-color: #C6D870;
