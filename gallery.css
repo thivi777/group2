@@ -1,0 +1,24 @@
+section.container img {
+  transition: transform 0.3s;
+}
+section.container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  
+}
+/* Gallery images */
+.gallery-img {
+  width: 100%;           /* Fill the column width */
+  height: 250px;         /* Fixed height for all images */
+  object-fit: cover;     /* Crop/scale images to fit nicely */
+  border: 3px solid #2d6a4f; /* Dark green border */
+  border-radius: 10px;   /* Rounded corners */
+  transition: transform 0.3s, box-shadow 0.3s; /* Hover effect */
+}
+
+@media (max-width: 768px) {
+  .gallery-img {
+    height: 200px;
+  }
+}
+

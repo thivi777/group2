@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Healing Garden</title>
-    <link
-      href="./bootstrap-5.3.8-dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
+    <!-- Bootstrap CSS -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+  crossorigin="anonymous"
+/>
+
+  
     <script
       src="https://kit.fontawesome.com/84dd59ebf1.js"
       crossorigin="anonymous"
@@ -18,7 +21,7 @@
   </head>
   <body>
     <!-- navbar -->
-<nav class="navbar navbar-expand rounded-pill " id="header">
+<nav class="navbar navbar-expand rounded-pill" id="header">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"
           ><i class="fa-solid fa-seedling" style="color: greenyellow"></i
@@ -37,40 +40,60 @@
         </button>
         <div class="collapse navbar-collapse show" id="navbarDark">
           <ul class="navbar-nav me-auto mb-2 mb-xl-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Menu 
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          
+            <li class="nav-item">
+   
+    
+
+    </body>
+
+    <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="collapse navbar-collapse show" id="navbarDark">
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle text-dark"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+      Menu
+                  </a>
+                  <ul class="dropdown-menu drop rounded">
+                    <li><a class="dropdown-item" href="index1.html">herbal types</a></li>
+                    <li>
+                      <a class="dropdown-item" href="gallery.html">gallery</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#About Us">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Contact">Contact</a>
+              <a class="nav-link" href="#contact-section">Contact</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2 rounded-pill"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-dark rounded-pill" type="submit">
-              Search
-            </button>
-          </form>
+           <form class="d-flex Right" role="search">
+      <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light rounded-pill" type="submit">Search</button>
+    </form>
         </div>
       </div>
+     
     </nav>
                                     
                                               <!-- Carousel Start -->
@@ -108,7 +131,7 @@
         <!-- Slide 1 -->
         <div class="carousel-item active " data-bs-interval="2000">
           <img
-            src="/images/🌿 Discover the Magic of Herbal Remedies! ✨.jpeg"
+            src="imges/_ (3).jpeg"
             class="d-block w-100 rounded "
             height="500"
             alt="Slide 1"
@@ -117,7 +140,7 @@
         <!-- Slide 2 -->
         <div class="carousel-item" data-bs-interval="2000">
           <img
-            src="/images/_.jpeg"
+            src=""
             class="d-block w-100 rounded"
             height="500"
             alt="Slide 2"
@@ -126,7 +149,7 @@
         <!-- Slide 3 -->
         <div class="carousel-item" data-bs-interval="2000">
           <img
-            src="/images/_ (1).jpeg"
+            src=""
             class="d-block w-100 rounded"
             height="500"
             alt="Slide 3"
@@ -156,83 +179,106 @@
   </div>
     
                                        <!--About us  -->
-                                  <section id="About Us">
-      <div class="container mt-3 p-3 color1 rounded">
-                    <h1 class="text-center ">About Us</h1>
-                    <p class="text-center">this is paragrph.</p>
+                                  <section id="About Us" class="py-5">
+  <div class="container color1 rounded shadow p-4">
+    <div class="row align-items-center">
+      <!-- Left side: text -->
+      <div class="col-md-6">
+        <h2 class="text-success fw-bold">About The Healing Garden 🌿</h2>
+        <p>
+          Welcome to <strong>The Healing Garden</strong> — your natural hub for
+          herbal wellness and green living. We are dedicated to promoting
+          the power of plants through traditional knowledge and modern science.
+        </p>
+        <p>
+          Our mission is to help people reconnect with nature by sharing
+          knowledge about medicinal herbs, organic cultivation, and eco-friendly
+          living. From planting tips to herbal product insights, we aim to grow
+          a greener, healthier world together!
+        </p>
+        <button class="btn btn-outline-success rounded-pill mt-3">
+          Learn More
+        </button>
       </div>
-      </section>
-                                         <!-- Contact -->
-<section id="Contact"> 
-                                  <!-- MAIN ROW -->
-<div class="row ">  
-                              <!--main col-1  -->
-  <div class="col-5">               
-      <div class="container  border mt-5 mb-3 p-3 rounded c-color text-center">
-              <div class="mb-3">
-                <label class="form-label">Name</label>
-                <input type="name" class="form-control rounded-pill" placeholder="Name">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control rounded-pill" placeholder="Mail">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">subject</label>
-                <input type="subject" class="form-control rounded-pill" placeholder="Title">
-              </div>
-              <div class="mb-3">
-                <label>Message</label>
-                <textarea class="form-control rounded" placeholder="Type here"></textarea>
-              </div>
-              <div>
-                <button type="submit" class="btn btn-outline-dark rounded-pill">Send Now</button>
-              </div>
-      </div>        
-  </div>
-                                          <!-- main col-2 -->
-  <div class="col-5">
-      <div class="container border mt-5 mb-3 p-3 rounded c-color text-center">  
-                                                  <!-- second row -->
-      <div class="row">
-                                          <!-- second col-1 -->
-        <div class="col md-6">
-          <i class="fa-solid fa-phone"></i><br>
-          <h3>Phone Number</h3>
-          <p>0759881628</p>
-        </div>
-                                         <!-- second col-2 -->
-        <div class="col md-6">
-       <i class="fa-solid fa-envelope"></i>
-          <h3>Email Address</h3>
-          <a href="#">kapishan28@gmail.com</a>
-        </div>
+
+      <!-- Right side: image -->
+      <div class="col-md-6 text-center">
+        <img
+          src="imges/🌿 Discover the Magic of Herbal Remedies! ✨.jpeg " 
+          alt="Healing Garden"
+          class="img-fluid rounded shadow "
+        />
       </div>
-                            <!-- third row -->
-      <div class="row">
-                                    <!-- third col-1 -->
-        <div class="col md-6">
-         <i class="fa-brands fa-whatsapp"></i>
-          <h3>Watsapp</h3>
-          <p>0759881628</p>
-        </div>
-                                   <!-- third col-2 -->
-        <div class="col md-6">
-          <i class="fa-solid fa-location-dot"></i>
-          <h3>Location</h3>
-          <a href="https://maps.app.goo.gl/rWXpPYp8p6nMmbRN7">Jaffna</a>
-        </div>
-      </div>
-           <div class="row">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31465.033713859688!2d80.00782700140088!3d9.66999924308149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe53fd7be66aa5%3A0xc7da0d9203baf512!2sJaffna!5e0!3m2!1sen!2slk!4v1761885817817!5m2!1sen!2slk" width="600" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-           </div>
     </div>
-  </div>  
-</div>
-</section>
-<footer class=" rounded-pill color2 text-center">
-               @Copy Rights
+  </div>
+      </section>
+     <section id="contact-section">
+    <div class="container">
+      <h1 class="contact-title">Get in Touch</h1>
+      <div class="row g-5">
+
+        <!-- Contact Form -->
+        <div class="col-lg-6">
+          <div class="contact-form">
+            <form>
+              <div class="mb-4">
+                <input type="text" class="form-control rounded-pill" placeholder="Your Name" required>
+              </div>
+              <div class="mb-4">
+                <input type="email" class="form-control rounded-pill" placeholder="Your Email" required>
+              </div>
+              <div class="mb-4">
+                <input type="text" class="form-control rounded-pill" placeholder="Subject" required>
+              </div>
+              <div class="mb-4">
+                <textarea class="form-control rounded" rows="6" placeholder="Type your message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-send w-100">Send Message <i class="fa-solid fa-paper-plane ms-2"></i></button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info Cards -->
+        <div class="col-lg-6 contact-info">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card">
+                <i class="fa-solid fa-phone"></i>
+                <h5>Phone</h5>
+                <p>0759881628</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <i class="fa-solid fa-envelope"></i>
+                <h5>Email</h5>
+                <p>kapishan28@gmail.com</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <i class="fa-brands fa-whatsapp"></i>
+                <h5>WhatsApp</h5>
+                <p>0759881628</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h5>Location</h5>
+                <a href="https://maps.app.goo.gl/rWXpPYp8p6nMmbRN7" target="_blank color-primary ">Jaffna</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<footer class=" rounded-pill color-success  text-center">
+               &copy; 2025 The Healing Garden — All Rights Reserved 🌿
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
