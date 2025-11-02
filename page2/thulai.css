@@ -1,0 +1,82 @@
+
+body {
+  background-image: url('imges/Green plant, cosmetics home, shop background, home….jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+ 
+ body {
+      background-color: #eaf7ea;
+      font-family: "Poppins", sans-serif;
+    }
+    .card { border-radius: 15px; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f4f9f4;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+  
+
+    h1 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 40px;
+    }
+
+    .plant-section {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .plant-section img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      margin-right: 20px;
+    }
+
+    .plant-info {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .plant-info h2 {
+      color: #388e3c;
+      margin-top: 0;
+    }
+
+    .plant-info p {
+      color: #444;
+      text-align: justify;
+    }
+
+    ul {
+      margin-top: 10px;
+      color: #333;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #666;
+      margin-top: 50px;
+      border: #444;
+      background-color:aquamarine
+    }
+  
