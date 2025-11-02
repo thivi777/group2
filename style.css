@@ -14,7 +14,11 @@ html{
 ;
 }
 #Contact{
+<<<<<<< HEAD
     margin-left: 12%;
+=======
+    margin-left: 10%;
+>>>>>>> 1689ebd (Fix broken Bootstrap link and styles)
 }
 .color1{
     background-color: #C6D870;
@@ -34,4 +38,7 @@ html{
     border:1px solid rgba(189, 189, 189, 0.22);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1689ebd (Fix broken Bootstrap link and styles)
