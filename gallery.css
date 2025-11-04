@@ -1,24 +1,75 @@
-section.container img {
-  transition: transform 0.3s;
-}
-section.container img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-  
-}
-/* Gallery images */
-.gallery-img {
-  width: 100%;           /* Fill the column width */
-  height: 250px;         /* Fixed height for all images */
-  object-fit: cover;     /* Crop/scale images to fit nicely */
-  border: 3px solid #2d6a4f; /* Dark green border */
-  border-radius: 10px;   /* Rounded corners */
-  transition: transform 0.3s, box-shadow 0.3s; /* Hover effect */
+/* --- Gallery Card Styling --- */
+
+/* Make the link/card fill the column and set up relative positioning */
+.gallery-card {
+    display: block; /* Important to make the link take up space */
+    position: relative; /* CRITICAL: Allows absolute positioning of the text */
+    text-decoration: none; /* Remove underline from the link */
+    overflow: hidden; /* Ensures image doesn't show outside the container */
+    border-radius: 0.5rem; /* Matches the rounded corners from Bootstrap */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Keep the shadow */
 }
 
-@media (max-width: 768px) {
-  .gallery-img {
-    height: 200px;
-  }
+/* Container for the image and text */
+.gallery-card .card-content {
+    position: relative; /* Set context for child elements */
+    width: 100%;
+    /* You might need to set a fixed height or a max-height here 
+       if you want all cards to be the exact same size regardless of image aspect ratio */
+    /* Example for fixed height (adjust as needed): */
+    /* height: 250px; */ 
 }
 
+/* Ensure the image covers the container, and use scale for hover effect */
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover */
+    display: block;
+    /* If you set a fixed height on .card-content, use height: 100%; here */
+}
+
+/* --- Text Overlay Styling --- */
+
+/* Position the text absolutely in the center of the card */
+.card-text {
+    position: absolute;
+    top: 50%; /* Start positioning 50% from the top */
+    left: 50%; /* Start positioning 50% from the left */
+    transform: translate(-50%, -50%); /* Adjust back by half its size to center it perfectly */
+    
+    /* Styling for visibility */
+    color: white; /* White text for contrast */
+    text-align: center;
+    font-size: 1.8rem; /* Large font size */
+    font-weight: bold;
+    /* Add a shadow for maximum readability over busy images */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    /* Ensure no margin from Bootstrap's h4 is pushing it around */
+    margin: 0; 
+    padding: 10px;
+}
+
+/* --- Hover Effect (Optional but highly recommended) --- */
+
+/* Slight zoom on hover */
+.gallery-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Optional: Subtle darkened overlay on hover for better text visibility */
+.gallery-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent dark overlay */
+    transition: background 0.3s ease-in-out;
+}
+
+.gallery-card:hover::after {
+    background: rgba(0, 0, 0, 0.4); /* Darker on hover */
+}
