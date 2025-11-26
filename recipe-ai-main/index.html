@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Recipe Generator</title>
+  
+  <!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top px-4 py-3" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(8px);">
+  <a class="navbar-brand fw-bold" href="#">RecipeAI <i class="fas fa-utensils"></i></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav align-items-center">
+      <li class="nav-item mx-2"><a class="nav-link active" href="#">Home</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="about.html">About</a></li>
+       <li class="nav-item mx-2"><a class="nav-link" href="fedback.html">fedback</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="contact.html">Contact</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="#bookmarks"><i class="fas fa-bookmark"></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+ <!-- Hero Section -->
+<section class="hero d-flex flex-column align-items-center justify-content-center text-center">
+  <h1 class="mb-3">Discover Delicious Recipes</h1>
+  <p class="mb-4">Generate personalized recipes with AI in seconds!</p>
+
+  
+  <!-- Search Section
+  <div class="search-bar mb-4">
+    <input type="text" id="searchInput" class="form-control" placeholder="Type your recipe or ingredients">
+    <button id="searchBtn" class="btn btn-accent">Search</button>
+  </div> -->
+
+  <!-- Input Section for AI Recipe Generator -->
+  <div class="input-group mb-4">
+    <input type="text" id="ingredients" class="form-control" placeholder="Enter ingredients (Example: pasta, cheese, tomato)">
+    <button id="generateBtn" class="btn btn-primary">Generate Recipe</button>
+  </div>
+
+  <!-- AI Recipe Output Section -->
+  <div class="row g-4 mt-4" id="aiRecipeCards">
+    <!-- AI recipe cards appear here dynamically -->
+  </div>
+
+</section>
+
+
+
+  <!-- Categories -->
+  <div class="categories d-flex flex-wrap justify-content-center gap-2 mb-3">
+    <button class="btn btn-outline-primary"><i class="fas fa-cookie-bite me-1"></i>Recipe Creator</button>
+    <button class="btn btn-outline-primary"><i class="fas fa-calendar-check me-1"></i>Meal Planner</button>
+    <button class="btn btn-outline-primary"><i class="fas fa-bolt me-1"></i>Quick Meals</button>
+    <button class="btn btn-outline-primary"><i class="fas fa-leaf me-1"></i>Healthy</button>
+  </div>
+
+  <!-- Tags -->
+  <div class="tags d-flex flex-wrap justify-content-center gap-2">
+    <span class="tag">Rolled Oats</span>
+    <span class="tag">Mushrooms</span>
+    <span class="tag">Chicken</span>
+    <span class="tag">Vegan</span>
+    <span class="tag">Pasta</span>
+  </div>
+</section>
+
+<!-- Featured Recipes Carousel -->
+<section class="carousel-section container my-5">
+  <h2 class="text-center mb-4">Featured Recipes</h2>
+  
+  <div id="recipeCarousel" class="carousel slide shadow-sm rounded" data-bs-ride="carousel">
+    <div class="carousel-inner rounded">
+      <div class="carousel-item active">
+        <img src="images/ai rainbow.avif" class="d-block w-100 carousel-img rounded" alt="Pasta">
+        <div class="carousel-caption d-none d-md-block bg-light bg-opacity-75 rounded p-3">
+          <h5>Pasta Delight</h5>
+          <p>Rich creamy pasta with fresh herbs and spices.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/bear.webp" class="d-block w-100 carousel-img rounded" alt="Salad">
+        <div class="carousel-caption d-none d-md-block bg-light bg-opacity-75 rounded p-3">
+          <h5>Healthy Salad</h5>
+          <p>Fresh and crisp salad for a healthy lifestyle.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/feature_image_1.webp" class="d-block w-100 carousel-img rounded" alt="Chicken">
+        <div class="carousel-caption d-none d-md-block bg-light bg-opacity-75 rounded p-3">
+          <h5>Grilled Chicken</h5>
+          <p>Juicy grilled chicken with aromatic spices.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+     <button class="carousel-control-prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+    <!-- Indicators  -->
+     <div class="carousel-indicators mt-2">
+      <button type="button" data-bs-target="#recipeCarousel" data-bs-slide-to="0" class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#recipeCarousel" data-bs-slide-to="1" class="rounded-circle" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#recipeCarousel" data-bs-slide-to="2" class="rounded-circle" aria-label="Slide 3"></button>
+    </div>
+  </div>
+</section>
+
+
+
+  
+<!-- Recipe Cards Section -->
+<section class="recipes container my-5">
+  <h2 class="text-center mb-4">Popular Recipes</h2>
+  <div class="row g-4" id="staticRecipeCards">
+    <!-- Static recipe cards -->
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/images.jpeg" class="card-img-top rounded" alt="Pasta">
+        <div class="card-body">
+          <h5 class="card-title">Creamy Pasta</h5>
+          <p class="card-text">Delicious creamy pasta with fresh vegetables.</p>
+          <a href="#" class="btn btn-accent">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/images (1).jpeg" class="card-img-top rounded" alt="Salad">
+        <div class="card-body">
+          <h5 class="card-title">Fresh Salad</h5>
+          <p class="card-text">Healthy green salad with a tangy dressing.</p>
+          <a href="#" class="btn btn-accent">View Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card recipe-card shadow-sm h-100">
+        <img src="images/healthy-cobb-salad-steps-sq-026.jpg" class="card-img-top rounded" alt="Chicken">
+        <div class="card-body">
+          <h5 class="card-title">Grilled Chicken</h5>
+          <p class="card-text">Juicy grilled chicken with spices and herbs.</p>
+          <a href="#" class="btn btn-accent">View Recipe</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<!-- Footer -->
+ <section class="footer-section mt-5">
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 RecipeAI. All rights reserved. <i class="fas fa-utensils"></i></p>
+    <p>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms of Service</a>
+    </p>
+  </div>
+    </footer>
+ </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>

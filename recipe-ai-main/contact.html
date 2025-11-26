@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - RecipeAI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+   <a href="index.html" class="back-btn">
+  <i class="fas fa-home"></i>
+</a>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top px-4 py-3" style="background: rgba(255,255,255,0.85); backdrop-filter: blur(8px);">
+  <a class="navbar-brand fw-bold" href="index.html">RecipeAI <i class="fas fa-utensils"></i></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav align-items-center">
+      <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item mx-2"><a class="nav-link active" href="contact.html">Contact</a></li>
+      <li class="nav-item mx-2"><a class="nav-link" href="login.html"><i class="fas fa-user"></i> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Contact Form -->
+<section class="contact-section container my-5 pt-5">
+  <h1 class="text-center mb-4">Get in Touch</h1>
+  <form class="mx-auto" style="max-width:600px; backdrop-filter: blur(15px); background: rgba(255,255,255,0.15);" id="contactForm" class="p-4 rounded">
+    <div class="mb-3">
+      <label for="name" class="form-label text-light">Name</label>
+      <input type="text" class="form-control rounded-pill" id="name" placeholder="Your Name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label text-light">Email</label>
+      <input type="email" class="form-control rounded-pill" id="email" placeholder="you@example.com" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label text-light">Message</label>
+      <textarea class="form-control rounded" id="message" rows="4" placeholder="Your message..." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-accent w-100 rounded-pill">Send Message</button>
+  </form>
+</section>
+
+<footer class="bg-light text-dark text-center py-4 shadow-sm mt-5">
+  <p>&copy; 2025 RecipeAI. All rights reserved. <i class="fas fa-utensils"></i></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>
