@@ -1,0 +1,28 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(to bottom right, #f5f5f5, #e0f7fa);
+  }
+  
+  .login-container {
+    background: rgba(255,255,255,0.05);
+  }
+  
+  .login-card {
+    background: #fff;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  .btn-accent {
+    background-color: #2cc987;
+    color: white;
+    border: none;
+  }
+  
+  .btn-accent:hover {
+    background-color: #28b87e;
+  }
+  
+  
